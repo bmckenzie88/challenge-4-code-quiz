@@ -15,9 +15,9 @@ To use the quiz, first click the "Start!" button. You will then be presented wit
 
 Once you have entered your initials and clicked "submit", you will be taken to the highscores page where you can see your score and any other scores that have been stored. You can then return to the quiz or clear the highscores by clicking one of the buttons at the bottom of the highscores list.
 
-URL: https://bmckenzie88.github.io/password-generator/
+URL: https://bmckenzie88.github.io/challenge-4-code-quiz/
 
-![password-generator-screenshot](./assets/images/screenshot.jpg)
+![coding-quiz-screenshot](./assets/images/deployed-quiz-screenshot.jpg)
 
 
 ## Credits

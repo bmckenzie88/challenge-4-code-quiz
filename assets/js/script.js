@@ -116,6 +116,7 @@ results.addEventListener("click", function (event) {
     console.log (savedScores)
     savedScores.push(loggedScore)
     localStorage.setItem("savedScores", JSON.stringify(savedScores))
+    open("https://bmckenzie88.github.io/challenge-4-code-quiz/highscores.html") 
   }
 })
 }
