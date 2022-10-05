@@ -28,6 +28,9 @@ function countdown() {
     } else {
       timerEl.textContent = "GAMEOVER";
       clearInterval(timeInterval);
+      card1.setAttribute("style", "display: none");
+      card2.setAttribute("style", "display: none");
+      card3.setAttribute("style", "display: none");
       card4.setAttribute("style", "display: none");
     }
   }, 1000);
@@ -88,7 +91,7 @@ card4.addEventListener("click", function (event) {
     userScore.textContent = "You scored " + score + " points!"
     clearInterval(timeInterval)
     timerEl.setAttribute("style", "visibility: hidden")
-    
+
   }
   localStorage.setItem("score", score)
 });
