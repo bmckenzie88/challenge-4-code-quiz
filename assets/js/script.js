@@ -7,7 +7,14 @@ var card4 = document.querySelector("#card-4");
 var results = document.querySelector("#results")
 var userScore = document.querySelector("#score")
 var initials = document.querySelector("#initials")
-var timeLeft = 90;
+var timeLeft = 40;
+
+startButton.addEventListener("click", function () {
+  console.log("clicked!");
+  countdown();
+  card1.setAttribute("style", "display: block");
+  startButton.setAttribute("style", "display: none");
+});
 
 function countdown() {
   
@@ -21,15 +28,10 @@ function countdown() {
     } else {
       timerEl.textContent = "GAMEOVER";
       clearInterval(timeInterval);
+      card4.setAttribute("style", "display: none");
     }
   }, 1000);
-}
-startButton.addEventListener("click", function () {
-  console.log("clicked!");
-  countdown();
-  card1.setAttribute("style", "display: block");
-  startButton.setAttribute("style", "display: none");
-});
+
 card1.addEventListener("click", function (event) {
   var element = event.target;
 
@@ -75,6 +77,8 @@ card4.addEventListener("click", function (event) {
     var score = timeLeft
     console.log(score)
     userScore.textContent = "You scored " + score + " points!"
+    clearInterval(timeInterval)
+    timerEl.setAttribute("style", "visibility: hidden")
   } else if (element.matches ("#incorrect")) {
     card4.setAttribute("style", "display: none");
     results.setAttribute("style", "display: block");
@@ -82,7 +86,9 @@ card4.addEventListener("click", function (event) {
     var score = timeLeft
     console.log(score)
     userScore.textContent = "You scored " + score + " points!"
-
+    clearInterval(timeInterval)
+    timerEl.setAttribute("style", "visibility: hidden")
+    
   }
   localStorage.setItem("score", score)
 });
@@ -109,4 +115,4 @@ results.addEventListener("click", function (event) {
     localStorage.setItem("savedScores", JSON.stringify(savedScores))
   }
 })
-  
+}
